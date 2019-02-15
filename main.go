@@ -74,7 +74,12 @@ func main() {
 		return
 	}
 	for _, res := range def.Resources {
-		fmt.Println(res.Name)
-		fmt.Println(res.Method, res.URL)
+		// if res.Type == "request_group" {
+		// 	fmt.Println(res.Name)
+		// }
+		if res.Type == "request" {
+			fmt.Println(res.Method, res.URL)
+		}
+
 	}
 }
